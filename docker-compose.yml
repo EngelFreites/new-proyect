@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app # Monta el código fuente para cambios en vivo
+      - /app/node_modules # Evita que los módulos de la máquina interfieran
+    depends_on:
+      - backend
+    command: ["npm", "run", "dev", "--", "--host"]
+    environment:
+      - NODE_ENV=development
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - FASTAPI_ENV=production

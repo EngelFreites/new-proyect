@@ -1,37 +1,82 @@
-# 🚀 Plantilla Full Stack con FastAPI, React, SQLite3 y Docker Compose
+# 📌 Convenciones para Commits
 
-Esta es una plantilla completa para iniciar un proyecto **Full Stack** con:
+✅ **Estructura Recomendada**
 
-- **FastAPI** (Backend)
-- **React con Vite** (Frontend)
-- **SQLite3** (Base de datos)
-- **Docker y Docker Compose** (Orquestación de contenedores)
-
-## 🚀 Instalación y Ejecución
-
-### 1️⃣ **Clonar el Repositorio**
+Cada commit debe seguir este formato:
 
 ```sh
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd OrEn
+  tipo(scope): mensaje breve en presente
 ```
 
-### 2️⃣ **Ejecutar con Docker Compose**
+📌 **Ejemplo**
 
 ```sh
-docker-compose up --build
+refactor(backend): mejorar estructura de rutas
 
 ```
 
-### 3️⃣ **\*Acceder a las Aplicaciones**
+## 🎯 Tipos de Commits
 
-- **Backend Docs (FastAPI - Swagger UI) → http://localhost:8000/docs**
-- **Backend (FastAPI - Swagger UI) → http://localhost:8000/**
-- **Frontend (React con Vite) → http://localhost:5173**
+- **feat** : ✨ Nueva funcionalidad o característica
+- **fix** :🐛 Corrección de errores
+- **refactor** : 🔨 Reestructuración del código sin cambiar su funcionalidad
+- **docs** : 📖 Cambios en la documentación (README, comentarios, etc.)
+- **style** : 🎨 Cambios de formato, espacios, comas. (sin afectar el código)
+- **test** : ✅ Agregar o modificar pruebas
+- **chore** : 🔧 Mantenimiento, configuración o tareas automáticas
+- **ci** : 🔄 Cambios en integración continua (GitHub Actions, Docker, etc.)
+- **build** : 🏗 Cambios en dependencias, compilación o herramientas de construcción
 
-### 🛠 **Tecnologías Utilizadas**
+## ⚡ Ejemplos de Commits Correctos
 
-- **Backend: FastAPI, SQLite3, SQLModel, Pydantic, Uvicorn**
-- **Frontend: React, Vite**
-- **Base de Datos: SQLite3**
-- **Contenedores: Docker y Docker Compose**
+```sh
+feat(ui): agregar componente de botones personalizados
+fix(api): corregir error en el endpoint de autenticación
+docs(readme): mejorar la guía de instalación
+test(backend): agregar pruebas para la capa de servicios
+chore(linter): actualizar configuración de ESLint
+```
+
+## 🔀 Reglas para Nombres de Ramas
+
+📌 **Este proyecto es un monorepositorio, por lo que las ramas deben seguir estas reglas:**
+
+- **Si trabajas en el frontend, la rama debe llamarse:**
+
+```sh
+frontend/nombre-de-la-tarea
+```
+
+- **Si trabajas en el backend, la rama debe llamarse:**
+
+```sh
+backend/nombre-de-la-tarea
+```
+
+## ⚡ Ejemplo de Flujo de Trabajo
+
+1️⃣ **Crear una nueva rama antes de trabajar:**
+
+```sh
+Copiar
+Editar
+git checkout -b frontend/agregar-modal-productos
+```
+
+2️⃣ **Hacer commits siguiendo las reglas:**
+
+```sh
+Copiar
+Editar
+git commit -m "feat(ui): agregar modal de productos en frontend"
+```
+
+3️⃣ **Subir la rama al repositorio:**
+
+```sh
+Copiar
+Editar
+git push origin frontend/agregar-modal-productos
+```
+
+4️⃣ Abrir un Pull Request (PR) en GitHub.

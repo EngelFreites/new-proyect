@@ -11,7 +11,7 @@ Cada commit debe seguir este formato:
 📌 **Ejemplo**
 
 ```sh
-refactor(backend): mejorar estructura de rutas
+refactor(backend): improve route structure
 
 ```
 
@@ -30,11 +30,11 @@ refactor(backend): mejorar estructura de rutas
 ## ⚡ Ejemplos de Commits Correctos
 
 ```sh
-feat(ui): agregar componente de botones personalizados
-fix(api): corregir error en el endpoint de autenticación
-docs(readme): mejorar la guía de instalación
-test(backend): agregar pruebas para la capa de servicios
-chore(linter): actualizar configuración de ESLint
+feat(ui): add custom buttons component
+fix(api): Fix error in authentication endpoint
+docs(readme): Improve the installation guide
+test(backend): Add tests for the service layer
+chore(linter): Update ESLint configuration
 ```
 
 ## 🔀 Reglas para Nombres de Ramas
@@ -58,19 +58,19 @@ backend/nombre-de-la-tarea
 1️⃣ **Crear una nueva rama antes de trabajar:**
 
 ```sh
-git checkout -b frontend/agregar-modal-productos
+git checkout -b frontend/add-modal-products
 ```
 
 2️⃣ **Hacer commits siguiendo las reglas:**
 
 ```sh
-git commit -m "feat(ui): agregar modal de productos en frontend"
+git commit -m "feat(ui): add-modal-products"
 ```
 
 3️⃣ **Subir la rama al repositorio:**
 
 ```sh
-git push origin frontend/agregar-modal-productos
+git push origin frontend/add-modal-products
 ```
 
 4️⃣ Abrir un Pull Request (PR) en GitHub.

@@ -58,24 +58,18 @@ backend/nombre-de-la-tarea
 1️⃣ **Crear una nueva rama antes de trabajar:**
 
 ```sh
-Copiar
-Editar
 git checkout -b frontend/agregar-modal-productos
 ```
 
 2️⃣ **Hacer commits siguiendo las reglas:**
 
 ```sh
-Copiar
-Editar
 git commit -m "feat(ui): agregar modal de productos en frontend"
 ```
 
 3️⃣ **Subir la rama al repositorio:**
 
 ```sh
-Copiar
-Editar
 git push origin frontend/agregar-modal-productos
 ```
 

@@ -41,3 +41,16 @@ async def create_user(user_data: CreateUser, session: SessionDep ):
   session.refresh(user)
 
   return user 
+
+@router.delete("/api/users/{user_id}")
+async def delete_user(user_id: int, session: SessionDep):
+  
+  user = session.get(User, user_id )
+
+  if not user:
+    raise HTTPException(status_code=404, detail="User not found")
+  
+  session.delete(user)
+  session.commit()
+
+  return {"message": "User Deleted succefully"}

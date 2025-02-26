@@ -54,3 +54,16 @@ async def delete_user(user_id: int, session: SessionDep):
   session.commit()
 
   return {"message": "User Deleted succefully"}
+
+@router.patch("/api/users/{user_id}", response_model= UserBase)
+async def update_user(user_data: UserBase, user_id: int,  session: SessionDep ):
+  user = session.get(User, user_id)
+
+  if not user:
+    raise HTTPException( status_code= 404, detail="User not found")
+  
+  user.sqlmodel_update(user_data.model_dump(exclude_unset=True))
+
+  session.commit()
+  session.refresh(user)
+  return user
